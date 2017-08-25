@@ -1,0 +1,131 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" id="ng-app" ng-app="app"> <!--<![endif]-->
+  <head>
+    <title>TAXIMANAGER</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <link rel="stylesheet" href="css/structure.css"/>
+    <link rel="stylesheet" href="css/angucomplete-ie8.css"/>
+    <link rel="stylesheet" href="fonts/bariol/bariol.css"/>
+
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqS3V4XTssFmZ4vACQywrZGCvx0Pi_vLG2hQ2kl8xyxPXb3p6Y2g"><script src="https://www.iconexperience.com/_img/g_collection_png/standard/512x512/taxi.png"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    
+  </head>
+
+  <body ng-controller="MainController">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.13/es5-shim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.13/es5-sham.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+    <![endif]-->
+
+    <div id="wrapper">
+      
+        
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand">
+                            <a href="#">
+                                Menu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#">Pesquisa</a>
+                        </li>
+                        <li>
+                            <a href="#">Viagens</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#">Suporte</a>
+                        </li>
+                        <li>
+                            <a href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /#sidebar-wrapper -->
+    <div>
+            
+      <a href="#menu-toggle" class="btn" id="menu-toggle">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+      </a>
+
+      <div class="jumbotron" style="background-image: url(http://cdn.wallpapersafari.com/61/74/UcEkr1.jpg )">
+          <h1>TAXIMANAGER</h1>
+          <p>Faça pesquisa</p>
+        </div>
+    
+
+
+        <h3><a name="example1" class="page-anchor">Países Mundo</a></h3>
+        <div class="padded-row">
+          <div angucomplete-ie8 id="ex1" placeholder="Encontre países" maxlength="50" pause="100" selected-object="selectedCountry" local-data="countries" search-fields="name" title-field="name" minlength="1" input-class="form-control form-control-small" match-class="highlight">
+          </div>
+        </div>
+        <div class="result">
+          <div ng-show="selectedCountry">
+            Você selecionou <span class="bold-span">{{selectedCountry.originalObject.name}}</span> which has a country code of <span class="bold-span">{{selectedCountry.originalObject.code}}</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="large-padded-row">
+
+        <h3><a name="example2" class="page-anchor">Pessoas</a></h3>
+        <div class="padded-row">
+          <div angucomplete-ie8 id="ex2" placeholder="Encontre pessoas" pause="300" selected-object="selectedPerson" local-data="people" search-fields="firstName,surname" title-field="firstName,surname" description-field="twitter" image-field="pic" minlength="1" input-class="form-control form-control-small" match-class="highlight">
+          </div>
+        </div>
+        <div class="result">
+          <div class="" ng-show="selectedPerson">
+            Você selecionou <span class="bold-span">{{selectedPerson.originalObject.firstName}} {{selectedPerson.originalObject.surname}}</span>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular-touch.min.js"></script>
+      <script src="js/libs/angucomplete-ie8.js"></script>
+      <script src="js/app.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+    </div>
+  </body>
+</html>
