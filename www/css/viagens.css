@@ -1,0 +1,47 @@
+
+
+.table-caption {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: black;
+  }
+  
+  .del-cell {
+    width: 16px;
+    text-align: right;
+  }
+  .del-cell button {
+    padding: 2px;
+    font-size: 18px;
+    max-height: 26px;
+  }
+  
+  
+  // animations
+  
+  .table-anim.ng-enter { animation: bounceIn 1s; }
+  .table-anim.ng-leave { animation: bounceOut 1s; }
+  
+  .row-anim.ng-enter { animation: slideInLeft 0.2s; }
+  .row-anim.ng-leave { animation: slideOutRight 0.2s; }
+  
+  // prompt
+  .prompt {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    
+    border: 1px solid grey;
+    padding: 10px;
+    
+  }
+  .prompt input {
+    margin: 20px 0;
+  }
+  
+  
+  
+  
+  

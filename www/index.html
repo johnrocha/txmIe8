@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/angucomplete-ie8.css"/>
     <link rel="stylesheet" href="fonts/bariol/bariol.css"/>
 
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    
     <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqS3V4XTssFmZ4vACQywrZGCvx0Pi_vLG2hQ2kl8xyxPXb3p6Y2g"><script src="https://www.iconexperience.com/_img/g_collection_png/standard/512x512/taxi.png"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -33,39 +35,36 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
     <![endif]-->
 
-    <div id="wrapper">
-      
-        
-                <!-- Sidebar -->
-                <div id="sidebar-wrapper">
-                    <ul class="sidebar-nav">
-                        <li class="sidebar-brand">
-                            <a href="#">
-                                Menu
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="#">Pesquisa</a>
-                        </li>
-                        <li>
-                            <a href="#">Viagens</a>
-                        </li>
+    <div id="wrapper">        
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+              <li class="sidebar-brand">
+                  <a href="#">
+                      Menu
+                  </a>
+              </li>
+              <li>
+                  <a href="#">Dashboard</a>
+              </li>
+              <li>
+                  <a href="../pages/pesquisa.html">Pesquisa</a>
+              </li>
+              <li>
+                  <a href="../pages/viagens.html">Viagens</a>
+              </li>
 
-                        <li>
-                            <a href="#">Sobre</a>
-                        </li>
-                        <li>
-                            <a href="#">Suporte</a>
-                        </li>
-                        <li>
-                            <a href="#">Contato</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /#sidebar-wrapper -->
+              <li>
+                  <a href="#">Sobre</a>
+              </li>
+              <li>
+                  <a href="#">Suporte</a>
+              </li>
+              <li>
+                  <a href="#">Contato</a>
+              </li>
+          </ul>
+      </div>                <!-- /#sidebar-wrapper -->
     <div>
             
       <a href="#menu-toggle" class="btn" id="menu-toggle">
@@ -77,36 +76,40 @@
           <p>Faça pesquisa</p>
         </div>
     
-
-
-        <h3><a name="example1" class="page-anchor">Países Mundo</a></h3>
-        <div class="padded-row">
-          <div angucomplete-ie8 id="ex1" placeholder="Encontre países" maxlength="50" pause="100" selected-object="selectedCountry" local-data="countries" search-fields="name" title-field="name" minlength="1" input-class="form-control form-control-small" match-class="highlight">
-          </div>
+        <div id="site">
+                    
+              <form method="post" action="index.html">
+                  <fieldset>
+                      
+                      <div>
+                          <label for="txtEnderecoPartida">Endereço de partida:</label>
+                          <input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida" />
+                      </div>
+                      
+                      <div>
+                          <label for="txtEnderecoChegada">Endereço de chegada:</label>
+                          <input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" />
+                      </div>
+                      
+                      <div>
+                          <input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar" />
+                      </div>
+                  </fieldset>
+              </form>
+          
+              <div id="mapa"></div>
+              
+              <div id="trajeto-texto"></div>
+          
         </div>
-        <div class="result">
-          <div ng-show="selectedCountry">
-            Você selecionou <span class="bold-span">{{selectedCountry.originalObject.name}}</span> which has a country code of <span class="bold-span">{{selectedCountry.originalObject.code}}</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="large-padded-row">
-
-        <h3><a name="example2" class="page-anchor">Pessoas</a></h3>
-        <div class="padded-row">
-          <div angucomplete-ie8 id="ex2" placeholder="Encontre pessoas" pause="300" selected-object="selectedPerson" local-data="people" search-fields="firstName,surname" title-field="firstName,surname" description-field="twitter" image-field="pic" minlength="1" input-class="form-control form-control-small" match-class="highlight">
-          </div>
-        </div>
-        <div class="result">
-          <div class="" ng-show="selectedPerson">
-            Você selecionou <span class="bold-span">{{selectedPerson.originalObject.firstName}} {{selectedPerson.originalObject.surname}}</span>
-          </div>
-        </div>
-
-      </div>
-
+  
+      <script src="js/jquery.min.js"></script>
+      
+          <!-- Maps API Javascript -->
+          <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+   
+          <!-- Arquivo de inicialização do mapa -->
+      <script src="js/mapa.js"></script>
 
 
       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>

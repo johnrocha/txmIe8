@@ -1,0 +1,211 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" id="ng-app" ng-app="app"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" id="ng-app" ng-app="tableApp"> <!--<![endif]-->
+  <head>
+    <title>TAXIMANAGER</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <link rel="stylesheet" href="../css/structure.css"/>
+    <link rel="stylesheet" href="../css/angucomplete-ie8.css"/>
+    <link rel="stylesheet" href="../fonts/bariol/bariol.css"/>
+
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqS3V4XTssFmZ4vACQywrZGCvx0Pi_vLG2hQ2kl8xyxPXb3p6Y2g"><script src="https://www.iconexperience.com/_img/g_collection_png/standard/512x512/taxi.png"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/viagens.css"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="../css/simple-sidebar.css" rel="stylesheet">
+
+    <style>
+      * {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+    </style>
+    
+  </head>
+
+  <body ng-controller="tableCntr">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.13/es5-shim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.13/es5-sham.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+    <![endif]-->
+
+    <div id="wrapper">
+      
+        
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand">
+                            <a href="#">
+                                Menu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../index.html">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#">Pesquisa</a>
+                        </li>
+                        <li>
+                            <a href="#">Viagens</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#">Suporte</a>
+                        </li>
+                        <li>
+                            <a href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /#sidebar-wrapper -->
+    <div>
+            
+      <a href="#menu-toggle" class="btn" id="menu-toggle">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+      </a>
+
+      <div class="jumbotron" style="background-image: url(http://cdn.wallpapersafari.com/61/74/UcEkr1.jpg )">
+          <h1>TAXIMANAGER</h1>
+          <p>A NOVA MENEIRA DE GERENCIAR O USO DE TAXI NA SUA EMPRESA</p>
+        </div>
+    
+
+        <h2>Últimas viagens</h2>
+        
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquise por nome do Colaborador" title="Type in a name">
+        
+        <table id="myTable">
+          <tr class="header">
+            <th style="width:60%;">Name</th>
+            <th style="width:40%;">Viagem</th>
+            <th style="width:40%;">Horário</th>
+          </tr>
+          <tr>
+            <td>Alfred Gusmão</td>
+            <td>Av Paulista, 1374 → Faria Lima, 1222</td>
+            <td>12:05</td> 
+          </tr>
+          <tr>
+            <td>Fernando Sintra</td>
+            <td>Rua Suécia, 122 → Augusta, 1274</td>
+            <td>12:05</td>             
+          </tr>
+          <tr>
+            <td>Orlando Trala</td>
+            <td>Av Amapá, 459 → Praça do Carmo, S/N</td>
+            <td>12:05</td>             
+          </tr>
+          <tr>
+            <td>Marcelo Moraes</td>
+            <td> Rua Evangelista de Souza, 77 → Av Mato Grosso, 17</td>
+            <td>12:05</td>             
+          </tr>
+          <tr>
+            <td>Michelangelo Corizzo</td>
+            <td>Av Canada, 882 → Rua Coronel Callisto, 999</td>
+            <td>12:05</td>             
+          </tr>
+          <tr>
+            <td>João Pestana</td>
+            <td>Rua Germania, 528 → Av Canastrao 16 </td>
+            <td>12:05</td>             
+          </tr>
+          <tr>
+            <td>Carlos Washington</td>
+            <td>Av Liinhares, 12 → Capitão Esomecia</td>
+            <td>12:05</td>             
+          </tr>
+          <tr>
+            <td>Péricles Reggards</td>
+            <td>Av Inquisitor Esiterio</td>
+            <td>12:05</td>             
+          </tr>
+        </table>
+
+
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular-touch.min.js"></script>
+      <script src="js/libs/angucomplete-ie8.js"></script>
+      <script src="js/app.js"></script>
+      <script src="js/triplist.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+      });
+
+      function myFunction() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+      }
+
+    </script>
+
+    </div>
+  </body>
+</html>
