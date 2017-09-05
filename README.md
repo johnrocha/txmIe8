@@ -1,30 +1,31 @@
 
-### Getting Started
-e.
+### Instalação
+Abra terminal
+
+
+```bash
+cd txmIe8
+```
+
+Use esse comando na pasta raiz:
 
 ```bash
 bower install txmIe8 --save
 ```
 
-Or
+ou
 
 ```bash
 npm install angucomplete-ie8 --save
 ```
 
-Then add the txmIe8 module to your Angular App file, e.g.
 
-```js
-var app = angular.module('app', ["angucomplete-ie8"]);
-```
+### Start
 
-
-### Run
-
-To run, cd into 'www' directory and run static http server of your choice:
+Para start da aplicação, entre no diretótio 'www e inicialize server com este comando:
 
 ```bash
-cd examples
+cd www
 python -m SimpleHTTPServer
 ```
 
